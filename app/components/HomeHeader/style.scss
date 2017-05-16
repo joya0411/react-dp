@@ -1,0 +1,40 @@
+.home-header {
+    background: #f63;
+    padding:0.5rem;
+    display: flex;
+    align-items: center;
+    * {
+        font-size:16px;
+        color:#fff;
+        line-height: 1;
+    }
+}
+
+.home-header-left {
+    width: 3.0rem;
+    text-align: left;
+}
+.home-header-middle {
+    width: auto;
+    flex:1;
+
+    .search-container {
+        background-color: #fff;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        padding: 0.25rem;
+        i {
+            color: #ccc;
+        }
+        input {
+            font-size: 14px;
+            font-weight: normal;
+            color: #888;
+            width:90%;
+        }
+    }
+}
+.home-header-right {
+    width: 1.5rem;
+    text-align: right;
+}
