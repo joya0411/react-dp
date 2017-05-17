@@ -1,25 +1,60 @@
-.carousel-item {
-    ul {
-        display: flex;
+.home-category {
+    position: relative;
+    padding-bottom:1rem;
+    &:after {
+        content:'';
+        position: absolute;
+        left:0;
+        right:0;
+        bottom:0;
+        border-top:1px solid #e1e1e1;
+        transform:scaleY(.5);
     }
-    li {
-        width:20%;
-        .carousel-icon {
-            display: block;
-            width:2.2rem;
-            height:2.2rem;
-            margin:0 auto;
-            
+    .carousel-item {
+        ul {
+            display: flex;
+            flex-wrap:wrap;
         }
-        .carousel-name {
-            text-align: center;
-            font-size:0.7rem;
-            color:#333;
-            margin-top:0.15rem;
+        li {
+            width:20%;
+            margin-top:.75rem;
+            .carousel-icon {
+                display: block;
+                width:2.2rem;
+                height:2.2rem;
+                margin:0 auto;
+                
+            }
+            .carousel-name {
+                text-align: center;
+                font-size:0.7rem;
+                color:#333;
+                margin-top:0.15rem;
+            }
+            .carousel-icon1 {
+                background:yellow url('../images/huoguo.png') no-repeat 0 0;
+                background-size: cover;
+            }
         }
-        .carousel-icon1 {
-            background:yellow url('../images/huoguo.png') no-repeat 0 0;
-            background-size: cover;
+    }
+    .circles {
+        position:absolute;
+        width:100%;
+        left:0;
+        right:0;
+        bottom:.5rem;
+        text-align: center;
+        font-size:0;
+        li {
+            display: inline-block;
+            width:.4rem;
+            height:.4rem;
+            border-radius:50%;
+            background: #ccc;
+            margin:0 .15rem;
+        }
+        .on {
+            background: #f5734b;
         }
     }
 }

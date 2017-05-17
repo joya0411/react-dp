@@ -26,7 +26,7 @@ module.exports = {
     output:{
         path: __dirname + '/dist',
         filename:'js/[name].js',
-        publicPath: ''   //上线以后服务器的路径
+        // publicPath: ''   //上线以后服务器的路径
     },
     resolve:{
         extensions:['.js','.jsx']
@@ -78,10 +78,10 @@ module.exports = {
                 use:{
                     loader: 'url-loader',
                     options: {
-                        limit: 10 ,
+                        limit: 1 ,
                         name: '[name]-[hash:5].[ext]',
                         outputPath:'images/',
-                        publicPath: '../'
+                        publicPath: '/'
                     }
                 }
             },
@@ -91,9 +91,10 @@ module.exports = {
                 use:{
                     loader: 'url-loader',
                     options: {
-                        limit: 10,
-                        name: 'fonts/[name]-[hash:5].[ext]',
-                        publicPath: '../'
+                        limit: 1,
+                        name: '[name]-[hash:5].[ext]',
+                        outputPath:'fonts/',
+                        publicPath: '/'
                     }
                 }
             }
