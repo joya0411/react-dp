@@ -9,12 +9,17 @@
             width:2.2rem;
             height:2.2rem;
             margin:0 auto;
+            
         }
         .carousel-name {
             text-align: center;
             font-size:0.7rem;
             color:#333;
             margin-top:0.15rem;
+        }
+        .carousel-icon1 {
+            background:yellow url('../images/huoguo.png') no-repeat 0 0;
+            background-size: cover;
         }
     }
 }

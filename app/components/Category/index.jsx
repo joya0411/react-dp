@@ -2,7 +2,7 @@ import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import ReactSwipe from 'react-swipe';
 
-import './style.scss';
+import './scss/style.scss';
 
 class Category extends React.Component{
     constructor(props){
@@ -14,17 +14,17 @@ class Category extends React.Component{
                 <div className="carousel-item">
                     <ul>
                         <li>
-                            <img src={require("url-loader!./images/meishi.png")}/>
+                            <div className="carousel-icon carousel-icon1"></div>
                             <div className="carousel-name">美食</div>
                         </li>
                         <li>
-                            <img src={require("url-loader!./images/dp_wx_maoyan_icon.png")}/>
+                            <img src={require('file-loader?publicPath=''!./images/huoguo.png')} className="carousel-icon"/>
                             <div className="carousel-name">美食</div>
                         </li>
-                        <li>
+                        {/*<li>
                             <img src="components/Category/images/dp_wx_maoyan_icon.png" className="carousel-icon"/>
                             <div className="carousel-name">美食</div>
-                        </li>
+                        </li>*/}
                     </ul>
                 </div>
                 <div>PANE 2</div>

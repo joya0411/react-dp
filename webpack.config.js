@@ -79,7 +79,8 @@ module.exports = {
                     loader: 'url-loader',
                     options: {
                         limit: 10 ,
-                        name: 'images/[name]-[hash:5].[ext]',
+                        name: '[name]-[hash:5].[ext]',
+                        outputPath:'images/',
                         publicPath: '../'
                     }
                 }
