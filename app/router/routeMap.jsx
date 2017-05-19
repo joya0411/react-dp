@@ -8,8 +8,8 @@ import {
 } from 'react-router-dom'
 
 
-import Home from '../containers/Home';
-import City from '../containers/City';
+import Home from '../containers/Home/Home';
+import City from '../containers/City/City';
 import NotFound from '../404'
 
 const routeMap = () => (

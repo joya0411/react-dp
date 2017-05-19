@@ -1,15 +1,6 @@
 .home-category {
     position: relative;
     padding-bottom:1rem;
-    &:after {
-        content:'';
-        position: absolute;
-        left:0;
-        right:0;
-        bottom:0;
-        border-top:1px solid #e1e1e1;
-        transform:scaleY(.5);
-    }
     .carousel-item {
         ul {
             display: flex;

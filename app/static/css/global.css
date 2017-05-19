@@ -63,20 +63,44 @@ i {
 .f-fr {
 	float:right;
 }
-.f-clearfix:before,.f-clearfix:after {
+/*.f-clearfix:before,.f-clearfix:after {
   content:'';
   display:table;      
-}
-.f-clearfix:before {
+}*/
+.f-clearfix:after {
+  content:'';
+  display:table;
   clear:both;
   overflow:hidden;
 }
-.f-clearfix {
+/*.f-clearfix {
   *zoom:1;  
-}
+}*/
 
 .ellipsis{
 	overflow: hidden;
 	text-overflow:ellipsis;
 	white-space: nowrap;
+}
+
+.border10 {
+  position:relative;
+  height:.5rem;
+  background:#f0f0f0;
+}
+.border10:before,
+.border10:after {
+    content: '';
+    position: absolute;
+    left:0;
+    right: 0;
+    height:1px;
+    transform: scaleY(.5);
+    background:#e1e1e1;
+}
+.border10:before {
+  top:0;
+}
+.border10:after {
+  bottom:0;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import './style.scss';
+import './scss/HomeHeader.scss';
 
 class HomeHeader extends React.Component{
 	constructor(props){

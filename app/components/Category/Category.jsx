@@ -2,11 +2,12 @@ import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import ReactSwipe from 'react-swipe';
 
-import './scss/style.scss';
+import './scss/Category.scss';
 
 class Category extends React.Component{
     constructor(props){
         super(props);
+        this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state = {
             index:0
         };
