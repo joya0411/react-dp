@@ -1,6 +1,13 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import './scss/HomeHeader.scss';
+import {
+  HashRouter,
+  Route,
+  Link,
+  Switch,
+  Redirect
+} from 'react-router-dom'
 
 class HomeHeader extends React.Component{
 	constructor(props){
@@ -11,7 +18,9 @@ class HomeHeader extends React.Component{
 		return (
 			<header className="home-header f-clearfix">
 				<div className="home-header-left">
-					<span>上海</span>
+					<Link to="/city">
+						<span>{this.props.cityName}</span>
+					</Link>
 					&nbsp;
 					<i className="icon-angle-down"></i>
 				</div>

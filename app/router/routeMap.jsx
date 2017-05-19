@@ -19,7 +19,6 @@ const routeMap = () => (
                 <Route path="/city" component={City}/>
                 <Route component={NotFound}/>
             </Switch>
-
     </HashRouter>
 )
 
