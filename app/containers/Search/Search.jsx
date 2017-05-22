@@ -1,6 +1,8 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import SearchHeader from '../../components/SearchHeader/SearchHeader';
+import SearchList from './subPage/list';
+
 class Search extends React.Component{
 	constructor(props){
 		super(props);
@@ -12,7 +14,8 @@ class Search extends React.Component{
 		let keyword = keywordArr.pop();
 		return (
 			<div>
-				<SearchHeader category={category} keyword={keyword}/>
+				<SearchHeader keyword={keyword}/>
+				<SearchList category={category} keyword={keyword}/>
 			</div>
 		)
 	}
