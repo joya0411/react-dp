@@ -39,7 +39,7 @@ class HomeHeader extends React.Component{
 		)
 	}
 	enterHandle(value){
-		let val = location.origin + '/#/search/abc/' + encodeURIComponent(value);
+		let val = location.origin + '/#/search/all/' + encodeURIComponent(value);
 		location.href = val;
 	}
 

@@ -6,16 +6,18 @@ import ListComponent from '../../../components/List/List'
 // import './style.scss'
 import LoadMore from '../../../components/LoadMore/LoadMore'
 
+const initialState = {
+    data : [],
+    hasMore: false, //是否还有下一页数据
+    isLoadingMore:false, //加载更多还是加载中...
+    page:0
+};
+
 class List extends React.Component{
     constructor(props){
         super(props);
         this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
-        this.state = {
-            data : [],
-            hasMore: false, //是否还有下一页数据
-            isLoadingMore:false, //加载更多还是加载中...
-            page:1
-        };
+        this.state = initialState;
     }
     render(){
         return (
@@ -34,16 +36,30 @@ class List extends React.Component{
         )
     }
     componentDidMount(){
+        console.log('componentDidMount');
         //获取首页数据
         this.loadFirstPageData();
     }
+    componentDidUpdate(prevProps,prevState){
+        console.log('componentDidUpdate');
+        console.log('===============================');
+        // return;
+        if ( this.props.keyword == prevProps.keyword ) {
+            return;
+        } else {
+            this.setState(initialState);
+            console.log(this.state)
+            this.loadFirstPageData();
+        }
+        
+    }
     //获取首页数据
     loadFirstPageData(){
-        console.log(this.props);
         const cityName = this.props.userinfo.cityName;
+        const page = this.state.page;
         const category = this.props.category;
         const keyword = this.props.keyword || '';
-        const result = getSearchData(0,cityName,category,keyword);
+        const result = getSearchData(page,cityName,category,keyword);
         this.resultHandle(result);
     }
     loadMoreFn(){
@@ -59,8 +75,7 @@ class List extends React.Component{
             this.resultHandle(result);
 
             this.setState({
-                isLoadingMore:false,
-                page: page+1
+                isLoadingMore:false
             })
         },500)
 
@@ -71,6 +86,11 @@ class List extends React.Component{
         });
     }
     resultHandle(result){
+        //page加1
+        const page = this.state.page;
+        this.setState({
+            page: page+1
+        });
         result.then(res=>{
             return res.json()
         }).then(json=>{
