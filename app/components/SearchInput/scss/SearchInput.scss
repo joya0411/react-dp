@@ -1,0 +1,15 @@
+.search-container {
+    background-color: #fff;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    padding: 0.25rem;
+    i {
+        color: #ccc;
+    }
+    input {
+        font-size: 14px;
+        font-weight: normal;
+        color: #333;
+        width:90%;
+    }
+}

@@ -1,13 +1,16 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import './scss/HomeHeader.scss';
+import {  hashHistory } from 'react-router';
 import {
   HashRouter,
   Route,
   Link,
   Switch,
   Redirect
-} from 'react-router-dom'
+} from 'react-router-dom';
+
+import SearchInput from '../SearchInput/SearchInput';
 
 class HomeHeader extends React.Component{
 	constructor(props){
@@ -26,10 +29,7 @@ class HomeHeader extends React.Component{
 				</div>
 				
 				<div className="home-header-middle">
-					<div className="search-container">
-						<i className="icon-search"></i>
-						<input type="text" placeholder="输入商户名、地点"/>
-					</div>
+					<SearchInput value="" enterHandle={this.enterHandle.bind(this)}/>
 				</div>
 				<div className="home-header-right">
 					<i className="icon-user"></i>
@@ -38,6 +38,11 @@ class HomeHeader extends React.Component{
 			
 		)
 	}
+	enterHandle(value){
+		let val = location.origin + '/#/search/abc/' + encodeURIComponent(value);
+		location.href = val;
+	}
+
 }
 
 export default HomeHeader;

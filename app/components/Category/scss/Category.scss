@@ -6,9 +6,10 @@
             display: flex;
             flex-wrap:wrap;
         }
-        li {
+        a {
             width:20%;
             margin-top:.75rem;
+            display: block;
             .carousel-icon {
                 display: block;
                 width:2.2rem;

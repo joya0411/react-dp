@@ -17,22 +17,6 @@
 .home-header-middle {
     width: auto;
     flex:1;
-
-    .search-container {
-        background-color: #fff;
-        border-radius: 0.75rem;
-        overflow: hidden;
-        padding: 0.25rem;
-        i {
-            color: #ccc;
-        }
-        input {
-            font-size: 14px;
-            font-weight: normal;
-            color: #888;
-            width:90%;
-        }
-    }
 }
 .home-header-right {
     width: 1.5rem;

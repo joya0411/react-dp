@@ -1,0 +1,18 @@
+.search-header {
+	position:relative;
+	padding:0.5rem;
+	text-align:center;
+	color:#fff;
+	background:#f63;
+	.back-icon {
+		position:absolute;
+		top:50%;
+		left:0;
+		color:#fff;
+		padding:0.5rem;
+		transform:translate(0,-50%);
+	}
+    .search-container {
+        margin-left:1.2rem;
+    }
+}
