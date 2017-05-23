@@ -11,6 +11,10 @@ class Star extends React.Component{
 	render(){
         let star = this.props.star || 0;
 
+        if (star>5) {
+            star = star%5;
+        }
+
 		return (
             <div className="star-group">
                 {
