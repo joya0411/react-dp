@@ -1,6 +1,7 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import './scss/Item.scss';
+import {Link} from 'react-router-dom';
 
 class Item extends React.Component{
 	constructor(props){
@@ -11,7 +12,7 @@ class Item extends React.Component{
 		let data = this.props.data;
 		return (
             <div className="list-item">
-				<a>
+				<Link to={"/detail/" + data.id}>
 					<div className="item-img">
 						<img src={data.img}/>
 					</div>
@@ -26,7 +27,7 @@ class Item extends React.Component{
 							<span className="num f-fr">已售{data.mumber}</span>
 						</div>
 					</div>
-				</a>
+				</Link>
 			</div>
         )
 	}

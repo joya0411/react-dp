@@ -1,23 +1,32 @@
 module.exports = [
     {
-        title: 'FUbar cafe',
-        img: '../../containers/Home/images/1.jpg',
-        link: '#',
-        price:'1',
-        originPrice:'28'
+        title: '暑假5折',
+        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191639092-2000037796.png',
+        link: 'http://www.imooc.com/wap/index'
     },
     {
-        title: '蟹榭',
-        img: '../../containers/Home/images/2.jpg',
-        link: '#',
-        price:'1',
-        originPrice:'50'
+        title: '特价出国',
+        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191648124-298129318.png',
+        link: 'http://www.imooc.com/wap/index'
     },
     {
-        title: '粗线条',
-        img: '../../containers/Home/images/3.jpg',
-        link: '#',
-        price:'1',
-        originPrice:'2'
+        title: '亮亮车',
+        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191653983-1962772127.png',
+        link: 'http://www.imooc.com/wap/index'
+    },
+    {
+        title: '学钢琴',
+        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191700420-1584459466.png',
+        link: 'http://www.imooc.com/wap/index'
+    },
+    {
+        title: '电影',
+        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191706733-367929553.png',
+        link: 'http://www.imooc.com/wap/index'
+    },
+    {
+        title: '旅游热线',
+        img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016191713186-495002222.png',
+        link: 'http://www.imooc.com/wap/index'
     }
 ]

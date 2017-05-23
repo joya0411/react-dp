@@ -1,0 +1,23 @@
+.comment-item {
+    position: relative;
+    padding:.5rem 0;
+    &:before {
+        content:'';
+        position: absolute;
+        left:0;
+        right:0;
+        bottom:0;
+        border-bottom:1px solid #f1f1f1;
+        transform:scaleY(.5);
+    }
+    h3 {
+        font-size:.8rem;
+        line-height: 1.5;
+        color:#666;
+    }
+    p {
+        font-size:.7rem;
+        line-height: 1.5;
+        color:#999;
+    }
+}

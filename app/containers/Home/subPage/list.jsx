@@ -13,7 +13,7 @@ class List extends React.Component{
             data : [],
             hasMore: false, //是否还有下一页数据
             isLoadingMore:false, //加载更多还是加载中...
-            page:1
+            page:0
         };
     }
     render(){
@@ -27,7 +27,7 @@ class List extends React.Component{
                 }
                 {
                     this.state.hasMore
-                    ? <LoadMore isLoadingMore={this.state.isLoadingMore} loadMoreFn={this.loadMoreFn.bind(this)} page={this.state.page} hasMoreFn={this.hasMoreFn.bind(this)}/>
+                    ? <LoadMore isLoadingMore={this.state.isLoadingMore} loadMoreFn={this.loadMoreFn.bind(this)}/>
                     : ''
                 }
             </div>
@@ -43,37 +43,35 @@ class List extends React.Component{
         const result = getListData(cityName,0);
         this.resultHandle(result);
     }
+    //加载其他页数据
     loadMoreFn(){
         this.setState({
             isLoadingMore:true
         });
+
         setTimeout(()=>{
             const cityName = this.props.cityName;
             const page = this.state.page;
             const result = getListData(cityName,page);
-            this.resultHandle(result);
+            const hasMore = page>=5 ? false : true;
+
+            this.resultHandle(result,hasMore);
 
             this.setState({
-                isLoadingMore:false,
-                page: page+1
+                isLoadingMore:false
             })
-        },500)
-
+        },500);
     }
-    hasMoreFn(){
-        this.setState({
-            hasMore:false
-        });
-    }
-    resultHandle(result){
+    resultHandle(result,hasMore=true){
         result.then(res=>{
             return res.json()
         }).then(json=>{
             let data = json.data;
-            let hasMore = json.hasMore;
+            let page = this.state.page;
             this.setState({
                 data:this.state.data.concat(data),
-                hasMore:hasMore
+                hasMore:hasMore,
+                page: page+1
             })
         })
     }

@@ -1,14 +1,7 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import './scss/HomeHeader.scss';
-import {  hashHistory } from 'react-router';
-import {
-  HashRouter,
-  Route,
-  Link,
-  Switch,
-  Redirect
-} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 import SearchInput from '../SearchInput/SearchInput';
 

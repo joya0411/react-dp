@@ -12,6 +12,7 @@ class Search extends React.Component{
 		let category = this.props.match.params.category.trim();
 		let keywordArr = this.props.location.pathname.split('/');
 		let keyword = keywordArr.pop();
+		keyword = category == keyword ? '':keyword;
 		return (
 			<div>
 				<SearchHeader keyword={keyword}/>

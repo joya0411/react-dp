@@ -35,9 +35,6 @@ class LoadMore extends React.Component{
                 if ( loadMoreHeight && loadMoreHeight < winHeight){
                     this.props.loadMoreFn();
                 }
-                if ( this.props.page == 5) {
-                    this.props.hasMoreFn();
-                }
             },50);
         }.bind(this),false);
 

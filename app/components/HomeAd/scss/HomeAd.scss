@@ -36,57 +36,16 @@
     ul {
     	display:flex;
     	justify-content:space-between;
+		flex-wrap:wrap;
     	li {
-			flex:1;
+			// flex:1;
 			width:33.33%;
-			margin:0 0.25rem;
+			padding:0 0.25rem;
 			box-sizing:border-box;
 			.pic {
-				width:5.4rem;
-				height:4.05rem;
+				width:100%;
+				height:6rem;
 				display:block;
-			}
-			.title {
-				font-size:0.7rem;
-				padding:0.25rem 0;
-				color:#333;
-				overflow: hidden;
-			    text-overflow: ellipsis;
-			    white-space: nowrap;
-			}
-			.price {
-				display:flex;
-				align-items:flex-end;
-				.price_current {
-					font-size:1.0rem;
-					color:#f63;
-					line-height:1;
-					&:before {
-						content:'￥';
-						color:#f63;
-						font-size:0.7rem;
-						line-height:1rem;
-					}
-				}
-				.price_old {
-					font-size:0.6rem;
-					line-height:1.0rem;
-					color:#999;
-					&:before {
-						content:'￥';
-						color:#999;
-						font-size:0.6rem;
-						line-height:.6rem;
-					}
-				}
-				.delPrice {
-					padding: 0.05rem 0.3rem 0.05rem 0.15rem;
-    				border-radius: 0.1rem;
-				    color: #f63;
-				    border: 1px solid #ff9470;
-			        transform: scale(.75);
-		            font-size: 0.6rem;
-				}
 			}
     	}
     }

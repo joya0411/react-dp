@@ -1,0 +1,27 @@
+import React from 'react';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
+import './scss/Star.scss';
+
+class Star extends React.Component{
+	constructor(props){
+		super(props);
+		this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+        
+	}
+	render(){
+        let star = this.props.star || 0;
+
+		return (
+            <div className="star-group">
+                {
+                    [1,2,3,4,5].map((item,index)=>{
+                        const lightClass = index<star ? 'light' : '';
+                        return <i key={index} className={"icon-star "+lightClass}></i>
+                    })
+                }
+            </div>
+        )
+	}
+}
+
+export default Star;

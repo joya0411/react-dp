@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 import HomeHeader from '../../components/HomeHeader/HomeHeader';
 import Category from '../../components/Category/Category';
 import Ad from './subPage/ad';
-import AdDel from './subPage/adDel';
 import List from './subPage/list';
 
 class Home extends React.Component{
@@ -20,8 +19,6 @@ class Home extends React.Component{
 				<Category/>
 				<div className="border10"></div>
 				<Ad/>
-				<div className="border10"></div>
-				<AdDel/>
 				<div className="border10"></div>
 				<List cityName={this.props.userinfo}/>
 			</div>
