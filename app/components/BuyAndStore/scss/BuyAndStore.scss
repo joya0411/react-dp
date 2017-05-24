@@ -1,0 +1,15 @@
+.buy-store-container {
+    display: flex;
+    justify-content: space-around;
+    padding:.5rem;
+    button {
+        line-height:1.5rem;
+        width:7rem;
+        background:#f63;
+        color:#fff;
+        font-size:.7rem;
+    }
+    .selected {
+        background:red;
+    }
+}

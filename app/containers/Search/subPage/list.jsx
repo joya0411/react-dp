@@ -65,7 +65,6 @@ class List extends React.Component{
             isLoadingMore:true
         });
         setTimeout(()=>{
-            console.log(this);
             const cityName = this.props.userinfo.cityName;
             const page = this.state.page;
             const category = this.props.category;
