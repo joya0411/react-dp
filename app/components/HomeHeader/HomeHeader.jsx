@@ -34,8 +34,10 @@ class HomeHeader extends React.Component{
 		)
 	}
 	enterHandle(value){
-		let val = location.origin + '/#/search/all/' + encodeURIComponent(value);
-		location.href = val;
+
+		const history = this.props.history;
+		console.log('history');
+		history.push('/search/all/'+ encodeURIComponent(value));
 	}
 
 }

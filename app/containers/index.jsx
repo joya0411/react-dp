@@ -1,6 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom'
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import RouteMap from '../router/routeMap';
 import LocalStore from '../util/localStore';
 import {CITYNAME} from '../config/localStoreKey';
 
@@ -36,11 +36,12 @@ class App extends React.Component{
 		});
 	}
 	render(){
+		
 		return (
 			<div>
 				{
 					this.state.initDone
-					? <RouteMap></RouteMap>
+					? this.props.children
 					: <div>正在加载...</div>
 				}
 			</div>
@@ -59,7 +60,7 @@ function mapDispatchToProps(dispatch){
 	}
 }
 
-export default connect(
+export default withRouter(connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(App);
+)(App));

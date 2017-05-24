@@ -15,7 +15,7 @@ class Home extends React.Component{
 	render(){
 		return (
 			<div>
-				<HomeHeader cityName={this.props.userinfo.cityName}></HomeHeader>
+				<HomeHeader cityName={this.props.userinfo.cityName} history={this.props.history}></HomeHeader>
 				<Category/>
 				<div className="border10"></div>
 				<Ad/>
