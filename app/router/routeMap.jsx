@@ -1,10 +1,8 @@
 import React from 'react'
 import {
-  HashRouter,
+  HashRouter as Router,
   Route,
-  Link,
-  Switch,
-  Redirect
+  Switch
 } from 'react-router-dom'
 
 
@@ -16,19 +14,16 @@ import Detail from '../containers/Detail/Detail';
 import Login from '../containers/Login/Login';
 
 const routeMap = () => (
-    <HashRouter>
+    <Router>
             <Switch>
                 <Route path="/" exact component={Home}/>
                 <Route path="/city" component={City}/>
-                {/*<Route path="/search/:category" exact strict component={Search}/>*/}
                 <Route path="/search/:category/:keyword?" component={Search}/>
                 <Route path="/detail/:id" component={Detail}/>
-                <Route path="/Login" exact strict component={Login}/>
-                <Route path="/Login/:router" component={Login}/>
-                {/*<Route path="/Login/:id" component={Login}/>*/}
+                <Route path="/Login/:route?r" component={Login}/>
                 <Route component={NotFound}/>
             </Switch>
-    </HashRouter>
+    </Router>
 )
 
 
