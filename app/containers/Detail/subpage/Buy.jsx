@@ -13,7 +13,6 @@ class Buy extends React.Component{
         this.state = {
             isStore:false //默认未收藏
         }
-        console.log(this.props)
 	}
 	render(){
 		return (
@@ -27,21 +26,53 @@ class Buy extends React.Component{
     checkStoreState(){
         
     }
+    //购买事件
     buyHandle(){
-        const username = this.props.userinfo.username;
+        //验证登录
+        const loginFlag = this.loginCheck();
+        if (!loginFlag) return;
+
+        //购买的流程
+
+        //跳转到用户主页
+        const history = this.props.history;
+        history.push('/User');
     }
+    //收藏事件
     storeHandle(){
-        const username = this.props.userinfo.username;
-        if (username){
-            //已经登录
-            let isStore = this.state.isStore;
-            this.setState({
-                isStore : !isStore
-            });
+        //验证登录
+        const loginFlag = this.loginCheck();
+        if (!loginFlag) return;
+
+        //维护redux的状态
+        const id = this.props.id;
+        const storeActions = this.props.storeActions;
+        if ( this.state.isStore ){
+            //已收藏
+            storeActions.rm({
+                id:id
+            })
         } else {
-            //尚未登录
-            location.href =  location.origin + '/#/login';
+            //未收藏
+            storeActions.add({
+                id:id
+            })
         }
+
+        this.setState({
+            isStore:!this.state.isStore
+        });
+    }
+    //验证登录
+    loginCheck(){
+        const history = this.props.history;
+        const id = this.props.id;
+        const username = this.props.userinfo.username;
+        if (!username){
+            history.push('/login/'+ encodeURIComponent('/detail/') +id)
+            return false;
+        }
+        return true;
     }
 }
 

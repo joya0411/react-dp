@@ -18,7 +18,13 @@ class Header extends React.Component{
         )
 	}
     clickHandle(){
-        window.history.back();
+        const history = this.props.history;
+        const backRouter = this.props.backRouter;
+        if (backRouter){
+            history.push('/');
+        } else {
+            window.history.back();
+        }
     }
 }
 

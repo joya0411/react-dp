@@ -34,9 +34,7 @@ class HomeHeader extends React.Component{
 		)
 	}
 	enterHandle(value){
-
 		const history = this.props.history;
-		console.log('history');
 		history.push('/search/all/'+ encodeURIComponent(value));
 	}
 

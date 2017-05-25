@@ -44,23 +44,24 @@ class Login extends React.Component{
     }
     // 处理登录成功之后的事情
     loginHandle(username){
-       
+        const history = this.props.history;
         // 保存用户名 - 修改 redux
         let userinfo = this.props.userinfo;
         userinfo.username = username;
 		this.props.userInfoActions.update(userinfo);
 
-        if (this.props.match.params.router) {
+        const router = this.props.match.params.router;
+        if (router) {
             // 跳转到指定的页面,从哪里来回哪里去
-            console.log('从哪里来回哪里去');
+            history.push( decodeURIComponent(router) )
         } else {
             // 已经登录，则跳转到用户主页
             this.goUserPage();
         }
     }
     goUserPage(){
-        console.log('.goUserPage');
-        window.history.back();
+        const history = this.props.history;
+        history.push('/User');
     }
 }
 

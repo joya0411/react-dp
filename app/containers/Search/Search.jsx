@@ -11,9 +11,10 @@ class Search extends React.Component{
 	render(){
 		const category = this.props.match.params.category;
 		const keyword = this.props.match.params.keyword;
+		
 		return (
 			<div>
-				<SearchHeader keyword={keyword}/>
+				<SearchHeader keyword={keyword} history={this.props.history}/>
 				<SearchList category={category} keyword={keyword}/>
 			</div>
 		)

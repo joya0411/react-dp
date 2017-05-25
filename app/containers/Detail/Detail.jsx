@@ -16,7 +16,7 @@ class Detail extends React.Component{
 			<div>
 				<Header title="商户详情"/>
 				<Info id={id}/>
-				<Buy id={id}/>
+				<Buy id={id} history={this.props.history}/>
 				<div className="border10"></div>
 				<Comment id={id}/>
 			</div>

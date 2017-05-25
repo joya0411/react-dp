@@ -23,8 +23,7 @@ class SearchHeader extends React.Component{
         location.href = location.origin;
     }
     enterHandle(value){
-        let val = location.origin + '/#/search/all/' + encodeURIComponent(value);
-		location.href = val;
+        history.push('/search/all/'+ encodeURIComponent(value))
     }
 }
 

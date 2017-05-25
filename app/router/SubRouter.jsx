@@ -8,6 +8,7 @@ import Search from '../containers/Search/Search';
 import NotFound from '../404';
 import Detail from '../containers/Detail/Detail';
 import Login from '../containers/Login/Login';
+import User from '../containers/User/User';
 
 export default class SubRouter extends React.Component{
     render(){
@@ -17,7 +18,8 @@ export default class SubRouter extends React.Component{
                 <Route path="/city" component={City}/>
                 <Route path="/search/:category/:keyword?" component={Search}/>
                 <Route path="/detail/:id" component={Detail}/>
-                <Route path="/Login/:route?" component={Login}/>
+                <Route path="/Login/:router?" component={Login}/>
+                <Route path="/user" component={User}/>
                 <Route component={NotFound}/>
             </Switch>
         )
