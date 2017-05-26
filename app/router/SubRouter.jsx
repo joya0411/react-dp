@@ -5,7 +5,7 @@ import { Route,Switch } from 'react-router-dom'
 import Home from '../containers/Home/Home';
 import City from '../containers/City/City';
 import Search from '../containers/Search/Search';
-import NotFound from '../404';
+import NotFound from '../404/404';
 import Detail from '../containers/Detail/Detail';
 import Login from '../containers/Login/Login';
 import User from '../containers/User/User';
