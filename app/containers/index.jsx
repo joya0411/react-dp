@@ -17,7 +17,6 @@ class App extends React.Component{
 		}
 	}
 	componentDidMount(){
-
 		//获取位置信息
 		let cityName = LocalStore.getItem(CITYNAME);
 		if (cityName==null){
@@ -27,8 +26,6 @@ class App extends React.Component{
 		this.props.userInfoActions.update({
 			cityName:cityName
 		});
-
-		
 
 		//更改状态
 		this.setState({

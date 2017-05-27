@@ -1,7 +1,10 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
+
 import './style.scss';
+
 import {getCommentData } from '../../../fetch/detail/detail';
+
 import CommentList from '../../../components/CommentList/CommentList';
 import LoadMore from '../../../components/LoadMore/LoadMore';
 

@@ -1,7 +1,9 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import Header from '../../components/Header/Header';
+
 import { connect } from 'react-redux';
+
+import Header from '../../components/Header/Header';
 import UserInfo from '../../components/UserInfo/UserInfo';
 import OrderList from './subPage/OrderList';
 

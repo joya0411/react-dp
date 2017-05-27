@@ -28,9 +28,6 @@ class CityList extends React.Component{
             </div>
         )
 	}
-    componentDidMount(){
-        console.log('componentDidMount');
-    }
     clickHandle(cityName){
         this.props.changeCity(cityName);
     }

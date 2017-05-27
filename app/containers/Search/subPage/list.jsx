@@ -1,9 +1,11 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+
 import { connect } from 'react-redux'
+
 import {getSearchData} from '../../../fetch/search/search'
+
 import ListComponent from '../../../components/List/List'
-// import './style.scss'
 import LoadMore from '../../../components/LoadMore/LoadMore'
 
 const initialState = {

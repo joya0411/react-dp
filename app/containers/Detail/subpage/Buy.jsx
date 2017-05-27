@@ -16,7 +16,7 @@ class Buy extends React.Component{
 	}
 	render(){
 		return (
-            <BuyAndStore isStore={this.state.isStore} storeHandle={this.storeHandle.bind(this)} buyHandle={this.buyHandle.bind(this)}/>
+            <BuyAndStore isStore={this.state.isStore} storeHandle={this.storeHandle.bind(this)} buyHandle={this.buyHandle.bind(this)} />
         )
 	}
     componentDidMount(){
@@ -24,6 +24,16 @@ class Buy extends React.Component{
     }
     // 检验当前商户是否被收藏
     checkStoreState(){
+        const id = this.props.id;
+        const store = this.props.store;
+
+        let isStore = store.some((item)=>{
+            return item.id === id
+        });
+
+        this.setState({
+            isStore:isStore
+        });
         
     }
     //购买事件
@@ -36,7 +46,7 @@ class Buy extends React.Component{
 
         //跳转到用户主页
         const history = this.props.history;
-        history.push('/User');
+        history.push('/user');
     }
     //收藏事件
     storeHandle(){

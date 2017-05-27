@@ -1,11 +1,12 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
+
 import HomeHeader from '../../components/HomeHeader/HomeHeader';
 import Category from '../../components/Category/Category';
 import Ad from './subPage/ad';
 import List from './subPage/list';
+
+import { connect } from 'react-redux'
 
 class Home extends React.Component{
 	constructor(props){

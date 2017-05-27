@@ -1,5 +1,6 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
+
 import './scss/SearchHeader.scss';
 import SearchInput from '../SearchInput/SearchInput'
 
@@ -19,10 +20,11 @@ class SearchHeader extends React.Component{
         )
 	}
     clickHandle(){
-        //返回首页
-        location.href = location.origin;
+        const history = this.props.history;
+        history.push('/');
     }
     enterHandle(value){
+        const history = this.props.history;
         history.push('/search/all/'+ encodeURIComponent(value))
     }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
+
 import './scss/Item.scss';
 import Star from '../../Star/Star';
 
@@ -90,7 +91,6 @@ class Item extends React.Component{
         const id = this.props.item.id;
         let stars = this.state.stars;
         stars[id] = star;
-
         this.setState({
             star: stars
         });

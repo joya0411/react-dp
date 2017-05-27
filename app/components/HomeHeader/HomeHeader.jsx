@@ -1,8 +1,10 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import './scss/HomeHeader.scss';
+
+ 
 import {Link} from 'react-router-dom';
 
+import './scss/HomeHeader.scss';
 import SearchInput from '../SearchInput/SearchInput';
 
 class HomeHeader extends React.Component{
@@ -30,7 +32,6 @@ class HomeHeader extends React.Component{
 					</Link>
 				</div>
 			</header>
-			
 		)
 	}
 	enterHandle(value){

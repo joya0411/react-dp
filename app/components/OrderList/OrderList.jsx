@@ -1,7 +1,8 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import Item from './Item/Item';
+
 import './scss/OrderList.scss';
+import Item from './Item/Item';
 
 class OrderList extends React.Component{
 	constructor(props){

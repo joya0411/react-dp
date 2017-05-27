@@ -1,5 +1,6 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
+
 import Item from './Item/Item';
 import './scss/CommentList.scss';
 

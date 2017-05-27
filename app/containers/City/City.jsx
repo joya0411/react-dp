@@ -1,12 +1,14 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import { bindActionCreators } from 'redux'
+
 import { connect } from 'react-redux';
-import { hashHistory } from 'react-router'
+import { bindActionCreators } from 'redux';
 import * as userInfoActionsFromOtherFile from '../../actions/userinfo';
+
 import Header from '../../components/Header/Header';
 import CurrentCity from '../../components/CurrentCity/CurrentCity';
 import CityList from '../../components/CityList/CityList';
+
 import { CITYNAME } from '../../config/localStoreKey';
 import LocalStore from '../../util/localStore';
 
@@ -23,11 +25,6 @@ class City extends React.Component{
 				<CityList changeCity={this.changeCity.bind(this)}/>
 			</div>
 		)
-	}
-	componentDidMount(){
-		// console.log('componentDidMount');
-		// console.log(this.props.userinfo);
-		// console.log(this.props.userInfoActions);
 	}
 	changeCity(newCityName){
 

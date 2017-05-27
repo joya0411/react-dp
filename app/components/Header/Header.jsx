@@ -20,6 +20,7 @@ class Header extends React.Component{
     clickHandle(){
         const history = this.props.history;
         const backRouter = this.props.backRouter;
+
         if (backRouter){
             history.push('/');
         } else {

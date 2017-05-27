@@ -1,9 +1,11 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import Header from '../../components/Header/Header';
+
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as userInfoActionsFromOtherFile from '../../actions/userinfo'; 
+
+import Header from '../../components/Header/Header';
 import LoginComponent from '../../components/Login/Login';
 
 class Login extends React.Component{
@@ -45,6 +47,7 @@ class Login extends React.Component{
     // 处理登录成功之后的事情
     loginHandle(username){
         const history = this.props.history;
+        
         // 保存用户名 - 修改 redux
         let userinfo = this.props.userinfo;
         userinfo.username = username;
