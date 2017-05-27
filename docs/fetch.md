@@ -6,7 +6,7 @@
 
 ## GET
 
-```
+```js
     var result = fetch('/api/1', {
             credentials: 'include', //跨域请求
             headers: { 'Accept': 'application/json, text/plain, */*'}
@@ -15,7 +15,7 @@
 
 ## POST
 
-```
+```js
 var result = fetch('/api/post', {
         method: 'POST',
         credentials: 'include',
@@ -28,7 +28,7 @@ var result = fetch('/api/post', {
     });
 ```
 
-```
+```js
     result.then(res=>{
         return res.json()
     }).then(json=>{

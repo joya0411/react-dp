@@ -2,7 +2,7 @@
 
 AppRouter.jsx
 
-```
+```jsx harmony
     import { HashRouter as Router,Route } from 'react-router-dom';
     import createBrowserHistory from 'history/createBrowserHistory';
     const history = createBrowserHistory();
@@ -20,7 +20,7 @@ AppRouter.jsx
 
 SubRouter.jsx
 
-```
+```jsx harmony
     import { Route,Switch } from 'react-router-dom'
     <Switch>
         <Route path="/" exact component={Home}/>
@@ -35,7 +35,7 @@ SubRouter.jsx
 
 App.jsx
 
-```
+```jsx harmony
     {
         this.state.initDone
         ? this.props.children
@@ -45,18 +45,18 @@ App.jsx
 # 
 * 没有匹配上显示404页面
 
-```
+```jsx harmony
     <Route component={NotFound}/>
 ```
 
 * 可选 URL：path="/Login/:router?"，加上?即可
 * history：
 
-```
+```jsx harmony
     import createBrowserHistory from 'history/createBrowserHistory';
     const history = createBrowserHistory();
 ```
-```
+```jsx harmony
     import { withRouter } from 'react-router-dom'
 
     export default withRouter(connect(

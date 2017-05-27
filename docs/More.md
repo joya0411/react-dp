@@ -3,7 +3,7 @@
 ## 表单
 * 跟 jquery 方式一样，拿到dom,修改input的值
 
-```
+```html
     <input type="text" ref="username"/>
 
     //获取input的值，this.refs.username.value
@@ -11,7 +11,7 @@
 
 * 更改state状态来修改input的值（推荐）
 
-```
+```jsx harmony
     constructor(props){
         super(props)
         this.state = {
