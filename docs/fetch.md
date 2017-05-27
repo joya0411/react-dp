@@ -1,10 +1,10 @@
 # fetch
 
-## 参考文章：
+## 参考文章：
 
 * [https://github.com/github/fetch](https://github.com/github/fetch)
 
-## GET
+## GET
 
 ```
     var result = fetch('/api/1', {
@@ -13,7 +13,7 @@
         });
 ```
 
-## POST
+## POST
 
 ```
 var result = fetch('/api/post', {
